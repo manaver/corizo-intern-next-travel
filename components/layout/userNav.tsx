@@ -42,8 +42,8 @@ const UserNav = () => {
             }
             <div className={`fixed ${isVisible ? 'flex' : 'hidden md:flex'} md:relative z-50 bg-blue-50 md:bg-transparent bg-opacity-95 p-3 md:p-0 h-screen md:h-fit w-screen md:w-fit top-0 left-0 flex-col md:flex-row items-center justify-start md:space-x-10 pt-12`}>
 
-                <div className="flex flex-row w-full justify-between">
-                    <p className="md:hidden bg-white text-blue-500 rounded text-xl font-bold p-2 whitespace-normal">
+                <div className="flex md:hidden flex-row w-full justify-between">
+                    <p className="bg-white text-blue-500 rounded text-xl font-bold p-2 whitespace-normal">
                         Trip Fever
                     </p>
                     <Button

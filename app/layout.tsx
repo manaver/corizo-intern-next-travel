@@ -3,6 +3,7 @@ import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import UserFooter from "@/components/layout/userFooter";
 
 const inter = Inter({ subsets: ['greek-ext'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
                 <body className={inter.className+ ' ' + ' scrollbar-hide'}>
                     <UserNav />
                     {children}
+                    <UserFooter />
                 </body>
             </html>
         </ClerkProvider>
