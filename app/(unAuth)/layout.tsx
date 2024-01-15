@@ -2,7 +2,7 @@ import UserNav from "@/components/layout/userNav";
 import { ClerkProvider } from '@clerk/nextjs';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import './globals.css';
+import '../globals.css';
 import UserFooter from "@/components/layout/userFooter";
 
 const inter = Inter({ subsets: ['greek-ext'] })
