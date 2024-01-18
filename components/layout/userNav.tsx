@@ -7,23 +7,31 @@ import {
     NavigationMenuList,
     navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
-import { UserButton } from "@clerk/nextjs";
+import { WishlistContext } from "@/provider/wishlist-provider";
+import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import { AlignJustify, X } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Button } from "../ui/button";
 
 const UserNav = () => {
 
     const [isVisible, setIsVisible] = useState(false);
+    const [cartSliderIsOpen, setCartSliderIsOpen] = useState(false)
 
-    return <>
+    const {
+        cart,
+        open,
+        toggleCart
+    } = useContext(WishlistContext);
+
+    return <header>
         <nav
             className={`${isVisible ? '' : 'fixed'} md:absolute top-0 bg-white md:bg-transparent z-40 p sm:h-[100px] flex flex-row w-full px-10 py-2 md:py-0 justify-between items-center text-slate-800`}>
-            <p className="bg-white text-blue-500 rounded text-xl font-bold p-2 whitespace-normal">
+            <Link href={'/'}
+                className="bg-white text-blue-500 rounded text-xl font-bold p-2 whitespace-normal">
                 Trip Fever
-            </p>
+            </Link>
 
             {isVisible ?
                 <Button
@@ -74,12 +82,22 @@ const UserNav = () => {
                     </NavigationMenuList>
                 </NavigationMenu>
 
-                <div className="w-full flex justify-center">
-                    <UserButton afterSignOutUrl="/" />
+                {/* Shopping cart */}
+                <div className='flex items-center justify-between gap-6'>
+                    <SignedIn>
+                        <UserButton />
+                    </SignedIn>
+                    <SignedOut>
+                        <SignInButton mode='modal'>
+                            <button className='rounded bg-white px-3 py-0.5'>
+                                Sign in
+                            </button>
+                        </SignInButton>
+                    </SignedOut>
                 </div>
-            </div>
-        </nav>
-    </>
+            </div >
+        </nav >
+    </header>
 }
 
 export default UserNav;

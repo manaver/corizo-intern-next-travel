@@ -1,4 +1,5 @@
 "use client"
+
 import SectionHeading from "@/components/shared/section-heading";
 import Link from "next/link";
 import 'swiper/css';
@@ -9,7 +10,7 @@ import { A11y, Autoplay, Navigation, Pagination, Scrollbar } from 'swiper/module
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CardLarge from "../cards/card-lg";
 
-export default function PopularPackages() {
+export default function PackagesCarousal({ packages }: any) {
 
     const breakpoints = {
         200: {
@@ -25,7 +26,7 @@ export default function PopularPackages() {
             slidesPerView: 1.5,
         },
         600: {
-          slidesPerView: 1.8
+            slidesPerView: 1.8
         },
         768: {
             slidesPerView: 2,
@@ -46,25 +47,25 @@ export default function PopularPackages() {
 
 
     return <>
-        <SectionHeading name={'Popular Packages'}/>
+        <SectionHeading name={'Popular Packages'} />
         <div className="my-4 max-w-[95dvw] mx-auto">
             <Swiper
-               modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-               autoplay={{delay: 2000}}
-               centeredSlides={true}
-               breakpoints={breakpoints}
-               pagination={{ clickable: true }}
-               loop={true}
-               navigation={true}
-               className='w-full'
+                modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
+                autoplay={{ delay: 2000 }}
+                centeredSlides={true}
+                breakpoints={breakpoints}
+                pagination={{ clickable: true }}
+                loop={true}
+                navigation={true}
+                className='w-full'
             >
-                {Array.from({length: 10}).map((_, index) => (
+                {packages.map((pkg: any, index: number) => (
                     <SwiperSlide
                         key={index}
                         className="my-10"
                     >
-                        <Link href={'/packages/goa'}>
-                           <CardLarge />
+                        <Link href={`/packages/${pkg?.product?.slug}`}>
+                            <CardLarge data={pkg?.product} />
                         </Link>
 
                     </SwiperSlide>
