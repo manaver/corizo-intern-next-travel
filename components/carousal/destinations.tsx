@@ -62,7 +62,7 @@ export default function DestinationsCarousal() {
                         key={index}
                         className="my-10"
                     >
-                        <Link href={'/packages/goa'}>
+                        <Link href={'#'}>
                             <CardSmall />
                         </Link>
 

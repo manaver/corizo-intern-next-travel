@@ -40,20 +40,20 @@ export default function UserFooter() {
                             <ul className="list-unstyled">
                                 <li>
                                     <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://www.creative-tim.com/presentation?ref=njs-profile">About
-                                        Us</a>
+                                        href="#" >
+                                        About Us</a>
                                 </li>
                                 <li>
                                     <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://blog.creative-tim.com?ref=njs-profile">Blogs</a>
+                                        href="#" >Blogs</a>
                                 </li>
                                 <li>
                                     <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
+                                        href="#" >Github</a>
                                 </li>
                                 <li>
                                     <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Other Services</a>
+                                        href="#" >Other Services</a>
                                 </li>
                             </ul>
                         </div>
@@ -62,21 +62,21 @@ export default function UserFooter() {
                             <ul className="list-unstyled">
                                 <li>
                                     <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT
+                                        href="#" >MIT
                                         License</a>
                                 </li>
                                 <li>
                                     <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                                        href="#" >Terms &amp; Conditions</a>
                                 </li>
                                 <li>
                                     <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://creative-tim.com/privacy?ref=njs-profile">Privacy
+                                        href="#" >Privacy
                                         Policy</a>
                                 </li>
                                 <li>
                                     <a className="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
-                                        href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                                        href="#" >Contact Us</a>
                                 </li>
                             </ul>
                         </div>

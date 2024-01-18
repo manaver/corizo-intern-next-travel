@@ -64,7 +64,7 @@ const UserNav = () => {
                 <NavigationMenu className="max-h-[200px]">
                     <NavigationMenuList className="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-6 items-center">
                         <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
+                            <Link href="/packages" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle() + ' hover:bg-blue-100 bg-transparent md:bg-white text-2xl'}>
                                     <p className="text-xl md:text-sm">Packages</p>
                                 </NavigationMenuLink>
@@ -72,7 +72,7 @@ const UserNav = () => {
                         </NavigationMenuItem>
 
                         <NavigationMenuItem>
-                            <Link href="/" legacyBehavior passHref>
+                            <Link href="/contact" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle() + ' hover:bg-blue-200 bg-transparent md:bg-white'}>
                                     <p className="text-xl md:text-sm">Contact</p>
                                 </NavigationMenuLink>
